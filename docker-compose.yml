@@ -1,0 +1,18 @@
+services:
+  abioticfactor:
+    image: diyagi/abiotifactor-server-docker:dev
+    build: .
+    container_name: abiotic-factor-server-dev
+    ports:
+      - 7777:7777/udp
+      - 27015:27015/udp
+    environment:
+      PUID: 1000
+      PGID: 1000
+      GSMAXSERVERPLAYERS: 6
+      GSPORT: 7777
+      GSQUERYPORT: 27015
+      GSSERVERPASSWORD: ""
+      GSSERVERNAME: "Abiotic Factor Docker"
+    volumes:
+      - /opt/serverdata/abioticfactor-data-dev:/abiotic-factor
