@@ -14,6 +14,8 @@ RUN apt-get update -y \
     tzdata \
     gosu \
     tini \
+    jo \
+    gettext-base \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
     
@@ -45,9 +47,17 @@ ENV PUID=1000 \
     DISCORD_WEBHOOK_URL="" \
     # Server Start
     DISCORD_SERVER_START_ENABLED=true \
-    DISCORD_SERVER_START_MESSAGE='**World:** ${world_name}\n**GameID:** ${gameid}' \
+    DISCORD_SERVER_START_MESSAGE='**World:** ${world_name}\n**Short Code:** ${short_code}' \
     DISCORD_SERVER_START_TITLE="Server Started" \
-    DISCORD_SERVER_START_COLOR="2013440"
+    DISCORD_SERVER_START_COLOR="2013440" \
+    # Server Stop
+    DISCORD_SERVER_STOP_ENABLED=true \
+    DISCORD_SERVER_STOP_MESSAGE="" \
+    DISCORD_SERVER_STOP_TITLE="Server Stopped" \
+    DISCORD_SERVER_STOP_COLOR="12779520" \
+    # Chat Log
+    DISCORD_CHAT_LOG_ENABLED=true \
+    DISCORD_CHAT_LOG_COLOR="16777215"
 
 # Switch to workdir
 WORKDIR ${HOMEDIR}
