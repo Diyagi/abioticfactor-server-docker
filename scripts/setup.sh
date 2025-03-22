@@ -16,7 +16,7 @@ args=(
     "+@sSteamCmdForcePlatformBitness" "64"
     "+force_install_dir" "$STEAMAPPSERVER"
     "+login" "anonymous"
-    "+app_update" "$STEAMAPPID" "validate"
+    "+app_update" "$STEAMDEDICATEDAPPID" "validate"
 )
 
 # Add the quit command

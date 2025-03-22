@@ -16,8 +16,9 @@ RUN apt-get update -y \
     tini \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
-
-ENV STEAMAPPID=2857200
+    
+ENV STEAMAPPID=427410
+ENV STEAMDEDICATEDAPPID=2857200
 ENV STEAMAPP "abiotic-factor"
 ENV STEAMAPPSERVER "/${STEAMAPP}"
 ENV SAVEDATA "${STEAMAPPSERVER}/AbioticFactor/Saved/SaveGames/Server"

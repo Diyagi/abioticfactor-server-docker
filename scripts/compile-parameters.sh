@@ -18,7 +18,6 @@ params=(
     "-log"
     "-newconsole"
     "-useperfthreads"
-    "-NoAsyncLoadingThread"
     "-UseMultithreadForDS"
     "-NumberOfWorkerThreadsServer"="$(nproc --all)"
 )
@@ -26,8 +25,8 @@ params=(
 add_param "-MaxServerPlayers"      "${GSMAXSERVERPLAYERS}"
 add_param "-Port"                  "${GSPORT}"
 add_param "-QueryPort"             "${GSQUERYPORT}"
+add_param "-WorldSaveName"         "${GSWORLDSAVENAME}"
 add_param "-ServerPassword"        "${GSSERVERPASSWORD}"
 add_param "-SteamServerName"       "${GSSERVERNAME}"
-add_param "-WorldSaveName"         "${GSWORLDSAVENAME}"
 
 echo "${params[@]}"
