@@ -42,6 +42,6 @@ wine64 "${STEAMAPPSERVER}/AbioticFactor/Binaries/Win64/AbioticFactorServer-Win64
 WinePID=$!
 
 source "${SCRIPTSDIR}/logfile-parser.sh"
-tail --pid "$WinePID" -f "${STEAMAPPSERVER}/AbioticFactor/Saved/Logs/AbioticFactor.log" | LogParser &
+tail --pid "$WinePID" -n 0 -f "${STEAMAPPSERVER}/AbioticFactor/Saved/Logs/AbioticFactor.log" | LogParser &
 
 wait $WinePID

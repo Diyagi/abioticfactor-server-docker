@@ -45,6 +45,16 @@ ENV PUID=1000 \
     GSSERVERPASSWORD="" \
     GSSERVERNAME="Abiotic Factor Docker" \
     DISCORD_WEBHOOK_URL="" \
+    # Player Join
+    DISCORD_PLAYER_JOIN_ENABLED=true \
+    DISCORD_PLAYER_JOIN_MESSAGE='${player_name} (${steamid}) has entered the facility.' \
+    DISCORD_PLAYER_JOIN_TITLE="Player Joined" \
+    DISCORD_PLAYER_JOIN_COLOR="47456" \
+    # Player Leave
+    DISCORD_PLAYER_LEAVE_ENABLED=true \
+    DISCORD_PLAYER_LEAVE_MESSAGE='${player_name} (${steamid}) has exited the facility.' \
+    DISCORD_PLAYER_LEAVE_TITLE="Player Left" \
+    DISCORD_PLAYER_LEAVE_COLOR="11477760" \
     # Server Start
     DISCORD_SERVER_START_ENABLED=true \
     DISCORD_SERVER_START_MESSAGE='**World:** ${world_name}\n**Short Code:** ${short_code}' \
@@ -57,6 +67,7 @@ ENV PUID=1000 \
     DISCORD_SERVER_STOP_COLOR="12779520" \
     # Chat Log
     DISCORD_CHAT_LOG_ENABLED=true \
+    DISCORD_SERVER_CHAT_LOG_TITLE="" \
     DISCORD_CHAT_LOG_COLOR="16777215"
 
 # Switch to workdir
