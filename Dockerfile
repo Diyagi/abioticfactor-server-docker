@@ -11,6 +11,7 @@ ARG DEBIAN_FRONTEND="noninteractive"
 
 RUN apt-get update -y \
     && apt-get install -y --no-install-recommends --no-install-suggests \
+    libegl1 \
     tzdata \
     gosu \
     tini \
@@ -21,9 +22,9 @@ RUN apt-get update -y \
     
 ENV STEAMAPPID=427410
 ENV STEAMDEDICATEDAPPID=2857200
-ENV STEAMAPP "abiotic-factor"
-ENV STEAMAPPSERVER "/${STEAMAPP}"
-ENV SAVEDATA "${STEAMAPPSERVER}/AbioticFactor/Saved/SaveGames/Server"
+ENV STEAMAPP="abiotic-factor"
+ENV STEAMAPPSERVER="/${STEAMAPP}"
+ENV SAVEDATA="${STEAMAPPSERVER}/AbioticFactor/Saved/SaveGames/Server"
 ENV SCRIPTSDIR="${HOMEDIR}/scripts"
 
 # Setup folders
