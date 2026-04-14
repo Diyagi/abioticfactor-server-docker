@@ -37,7 +37,7 @@ xvfbpid=$!
 LogInfo "Launching wine64 Abiotic Factor"
 export DISPLAY=:0.0
 export WINEDEBUG=fixme-all
-wine64 "${STEAMAPPSERVER}/AbioticFactor/Binaries/Win64/AbioticFactorServer-Win64-Shipping.exe" "${params[@]}" &
+wine "${STEAMAPPSERVER}/AbioticFactor/Binaries/Win64/AbioticFactorServer-Win64-Shipping.exe" "${params[@]}" &
 
 WinePID=$!
 
